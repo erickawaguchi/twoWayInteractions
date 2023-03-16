@@ -90,6 +90,7 @@ server <- function(input, output) {
     
     output$table <- renderText({
       paste0(
+        "Model: y = ", input$beta0, " + ", input$betaG, " * G + ", input$betaE, " * E + ", input$betaGxE, " * (GxE) \n \n",
         "Summary:", "\n",
         "G = 0; E = 0: y = beta0 = ", input$beta0, "\n",
         "G = 1; E = 0: y = beta0 + betaG = ", input$beta0 + input$betaG, "\n",
